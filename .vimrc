@@ -16,6 +16,8 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'othree/html5.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'mileszs/ack.vim'
+Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 
 " Basic Settings
@@ -24,7 +26,9 @@ filetype plugin indent on
 syntax enable
 
 colorscheme hybrid 
-set guifont=Menlo\ Regular:h13
+
+" OSX font
+" set guifont=Menlo\ Regular:h13
 
 set incsearch
 set ignorecase
@@ -80,3 +84,9 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" ctrl c + ctrl v
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
