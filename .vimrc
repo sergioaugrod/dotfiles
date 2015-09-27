@@ -18,6 +18,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mileszs/ack.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'scheakur/vim-scheakur'
 call vundle#end()
 
 " Basic Settings
@@ -25,9 +26,10 @@ call vundle#end()
 filetype plugin indent on
 syntax enable
 
-colorscheme hybrid 
+colorscheme scheakur
 
-" OSX font
+" OSX Font
+
 " set guifont=Menlo\ Regular:h13
 
 set incsearch
@@ -78,14 +80,15 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
-" Window buffer navigation
+" Window Buffer Navigation
  
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" ctrl c + ctrl v
+" Ctrl C + Ctrl V
+
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
