@@ -11,10 +11,12 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'mileszs/ack.vim'
+Plugin 'fatih/vim-go'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'othree/html5.vim'
+Plugin 'digitaltoad/vim-jade'
 Plugin 'godlygeek/tabular'
 Plugin 'matze/vim-move'
 Plugin 'tpope/vim-surround'
@@ -26,7 +28,7 @@ call vundle#end()
 filetype plugin indent on
 syntax enable
 
-colorscheme scheakur
+colorscheme hybrid 
 
 " OSX Font
 set guifont=Menlo\ Regular:h13
@@ -99,3 +101,7 @@ set guioptions-=r
 
 " Alias to Clear Search
 nnoremap <F3> :set hlsearch!<CR>
+
+" Disable go auto format and show errors
+let g:go_fmt_fail_silently = 1
+let g:go_fmt_autosave = 0
