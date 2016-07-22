@@ -12,25 +12,27 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'rking/ag.vim'
 Plugin 'fatih/vim-go'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'guns/vim-clojure-static'
-Plugin 'jpalardy/vim-slime'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'othree/html5.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'matze/vim-move'
 Plugin 'tpope/vim-surround'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'godlygeek/csapprox'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-fireplace'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'scheakur/vim-scheakur'
+Plugin 'jgdavey/tslime.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -38,8 +40,8 @@ syntax enable
 
 colorscheme hybrid
 
-" Font and Size
-set guifont=Source\ Code\ Pro\ For\ Powerline:h13
+" OSX Font
+set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 
 set incsearch
 set ignorecase
@@ -100,10 +102,12 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
 " Airline
+"let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-" Rspec terminal
+" RSpec terminal
 let g:rspec_runner = "os_x_iterm"
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
 " Remove Bars
 set guioptions-=T
