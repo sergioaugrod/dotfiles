@@ -17,14 +17,20 @@ Plugin 'rking/ag.vim'
 Plugin 'fatih/vim-go'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'guns/vim-clojure-static'
+Plugin 'jpalardy/vim-slime'
 Plugin 'tpope/vim-rails'
 Plugin 'othree/html5.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'matze/vim-move'
 Plugin 'tpope/vim-surround'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'godlygeek/csapprox'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-fireplace'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'scheakur/vim-scheakur'
 call vundle#end()
 
 filetype plugin indent on
@@ -33,8 +39,7 @@ syntax enable
 colorscheme hybrid
 
 " Font and Size
-set guifont=Source\ Code\ Pro\ For\ Powerline\ 11
-"set guifont=Source\ Code\ Pro\ For\ Powerline:h13
+set guifont=Source\ Code\ Pro\ For\ Powerline:h13
 
 set incsearch
 set ignorecase
@@ -97,6 +102,9 @@ let g:multi_cursor_quit_key='<Esc>'
 " Airline
 let g:airline_powerline_fonts = 1
 
+" Rspec terminal
+let g:rspec_runner = "os_x_iterm"
+
 " Remove Bars
 set guioptions-=T
 set guioptions-=t
@@ -138,3 +146,16 @@ let g:go_fmt_autosave = 0
 
 " Remove all trailing whitespaces at save
 autocmd BufWritePre * :%s/\s\+$//e
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+" REPL
+nmap <silent> <Leader>E :Eval<CR>
+nmap <silent> <Leader>R :Require!<CR>
+
+let g:jsx_ext_required = 0
+set term=screen-256color
