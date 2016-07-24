@@ -33,6 +33,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'jgdavey/tslime.vim'
+Plugin 'jpalardy/vim-slime'
 call vundle#end()
 
 filetype plugin indent on
@@ -161,5 +162,8 @@ map <Leader>a :call RunAllSpecs()<CR>
 nmap <silent> <Leader>E :Eval<CR>
 nmap <silent> <Leader>R :Require!<CR>
 
+let g:slime_target = "tmux"
+let g:slime_paste_file = "$HOME/.slime_paste"
 let g:jsx_ext_required = 0
+
 set term=screen-256color
