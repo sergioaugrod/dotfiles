@@ -24,7 +24,7 @@ Plugin 'othree/html5.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'matze/vim-move'
 Plugin 'tpope/vim-surround'
-Plugin 'flazz/vim-colorschemes'
+Plugin 'w0ng/vim-hybrid'
 Plugin 'godlygeek/csapprox'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'derekwyatt/vim-scala'
@@ -39,6 +39,7 @@ call vundle#end()
 filetype plugin indent on
 syntax enable
 
+set background=dark
 colorscheme hybrid
 
 " OSX Font
