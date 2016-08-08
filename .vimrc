@@ -168,3 +168,6 @@ let g:slime_paste_file = "$HOME/.slime_paste"
 let g:jsx_ext_required = 0
 
 set term=screen-256color
+
+let NERDTreeIgnore=['node_modules', 'bower_components']
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|tmp\|DS_Store\|git'
