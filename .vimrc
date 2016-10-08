@@ -20,11 +20,12 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'guns/vim-clojure-static'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'hdima/python-syntax'
 Plugin 'othree/html5.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'matze/vim-move'
 Plugin 'tpope/vim-surround'
-Plugin 'w0ng/vim-hybrid'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'godlygeek/csapprox'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'derekwyatt/vim-scala'
@@ -34,12 +35,13 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'jpalardy/vim-slime'
+Plugin 'dsawardekar/ember.vim'
+Plugin 'joukevandermaas/vim-ember-hbs'
 call vundle#end()
 
 filetype plugin indent on
 syntax enable
 
-set background=dark
 colorscheme hybrid
 
 " OSX Font
@@ -108,8 +110,8 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:airline_powerline_fonts = 1
 
 " RSpec terminal
-let g:rspec_runner = "os_x_iterm"
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:rspec_runner = "os_x_iterm2"
+"let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
 " Remove Bars
 set guioptions-=T
@@ -169,5 +171,7 @@ let g:jsx_ext_required = 0
 
 set term=screen-256color
 
-let NERDTreeIgnore=['node_modules', 'bower_components']
-let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|tmp\|DS_Store\|git'
+set wildignore+=**/node_modules,**/bower_components,**/tmp,**/vendor,**/git
+
+let NERDTreeIgnore=['node_modules', 'bower_components', 'tmp', 'vendor']
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|tmp\|vendor\|DS_Store\|git'
