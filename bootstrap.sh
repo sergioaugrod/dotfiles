@@ -1,7 +1,7 @@
 #!/bin/bash
 
 main() {
-  printf "\033[0;34mStarting dotfiles bootstrap\n"
+  printf "\033[0;34mStarting dotfiles bootstrap...\n"
 
   install_ohmyzsh
   install_fonts
