@@ -36,7 +36,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'guns/vim-clojure-static'
 Plugin 'fatih/vim-go'
-Plugin 'hdima/python-syntax'
+Plugin 'python-mode/python-mode'
 Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'dsawardekar/ember.vim'
@@ -187,3 +187,12 @@ set term=screen-256color
 set wildignore+=**/node_modules,**/bower_components,**/tmp,**/vendor,**/git
 let NERDTreeIgnore=['node_modules', 'bower_components', 'tmp', 'vendor']
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|tmp\|vendor\|DS_Store\|git'
+
+" Python mode disable some things
+let g:pymode_options_colorcolumn = 0
+let g:pymode_lint = 0
+let g:pymode_run = 0
+let g:pymode_virtualenv = 0
+let g:pymode_doc = 0
+let g:pymode_folding = 0
+let g:pymode_rope = 0
