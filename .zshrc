@@ -14,17 +14,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 
-alias be="bundle exec"
-alias dotfiles="cd ~/projects/dotfiles"
-alias clojure="cd ~/studies/clojure"
 alias nosleep="pmset noidle"
 
 # Environments
 
 export VISUAL=vim
 export EDITOR=$VISUAL
-export NVM_DIR="/Users/sergioaugrod/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Tmux colors fix
 
