@@ -1,6 +1,5 @@
 " Force read encoding
 set encoding=utf-8
-
 " To work cool, disable compatibility with Vi
 set nocompatible
 
@@ -49,7 +48,7 @@ syntax enable
 set background=dark
 colorscheme hybrid
 
-" OSX Font
+" https://github.com/powerline/fonts/tree/master/SourceCodePro
 set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 
 " Move the cursor to the matched string
@@ -61,14 +60,25 @@ set ignorecase
 " Search do not wrap around
 set nowrap
 
+" Start scrolling 5 lines before the horizontal window border
 set scrolloff=5
+
+" Avoid lags
 set lazyredraw
+
+" Display line numbers
 set number
 set numberwidth=4
 
+" To display the status line always
 set laststatus=2
+
+" Dont unload buffers
 set hidden
+
+" New window is put below the current one
 set splitbelow
+" New window is put right of the current one
 set splitright
 
 " Show commands
@@ -83,20 +93,26 @@ set ruler
 " Flash screen instead of sounding a beep
 set visualbell
 
+" Allow backspace in insert mode
 set backspace=start,eol,indent
+
+" Reduce the need for % in matching
 set showmatch
 set matchtime=2
 
+" Tab characters entered will be changed to spaces
 set expandtab
+" Number of space characters inserted for indentation
 set shiftwidth=2
 set softtabstop=2
 
 " Avoid creation of * .ext files
 set nowritebackup
 set nobackup
-
-set autoread
 set noswapfile
+
+" Automatically read changes
+set autoread
 
 " Hidden buffer instead of close
 set hidden
@@ -119,7 +135,7 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
 
-" Multi Cursors Mapping
+" Multi cursors mapping
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
