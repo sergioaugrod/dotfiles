@@ -1,4 +1,4 @@
-export ZSH=/Users/sergioaugrod/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="lambda-mod"
 
@@ -7,7 +7,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/sergioaugrod/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
