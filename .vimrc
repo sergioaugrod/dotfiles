@@ -48,9 +48,6 @@ syntax enable
 set background=dark
 colorscheme hybrid
 
-" https://github.com/powerline/fonts/tree/master/SourceCodePro
-set guifont=Source\ Code\ Pro\ for\ Powerline:h13
-
 " Move the cursor to the matched string
 set incsearch
 " Search highlight
@@ -89,9 +86,6 @@ set noshowmode
 
 " Show the cursor position
 set ruler
-
-" Flash screen instead of sounding a beep
-set visualbell
 
 " Allow backspace in insert mode
 set backspace=start,eol,indent
@@ -201,8 +195,8 @@ set term=screen-256color
 
 " Ignore some directories
 set wildignore+=**/node_modules,**/bower_components,**/tmp,**/vendor,**/git
-let NERDTreeIgnore=['node_modules', 'bower_components', 'tmp', 'vendor']
-let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|tmp\|vendor\|DS_Store\|git'
+let NERDTreeIgnore=['node_modules', 'bower_components', 'tmp', 'vendor', 'tags']
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|tmp\|vendor\|DS_Store\|git|tags'
 
 " Python mode disable some things
 let g:pymode_options_colorcolumn = 0
