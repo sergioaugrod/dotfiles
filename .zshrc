@@ -24,3 +24,15 @@ export EDITOR=$VISUAL
 # Tmux colors fix
 
 export TERM="xterm-256color"
+
+# ASDF
+
+export PATH=$HOME/.asdf/shims:$PATH
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+# GOLANG
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$(go env GOPATH)/bin
