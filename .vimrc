@@ -40,7 +40,6 @@ Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'dsawardekar/ember.vim'
 Plugin 'joukevandermaas/vim-ember-hbs'
-Plugin 'udalov/kotlin-vim'
 call vundle#end()
 
 filetype plugin indent on

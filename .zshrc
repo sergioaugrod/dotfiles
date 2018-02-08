@@ -1,29 +1,16 @@
+# .ohmyzsh
+
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="lambda-mod"
-
-DISABLE_AUTO_TITLE="true"
 plugins=(git)
-
-# User configuration
-
-export PATH="$HOME/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
-# Aliases
-
-alias nosleep="pmset noidle"
-
-# Environments
+# General Environments
 
 export VISUAL=vim
 export EDITOR=$VISUAL
-
-# Tmux colors fix
-
-export TERM="xterm-256color"
 
 # ASDF
 
