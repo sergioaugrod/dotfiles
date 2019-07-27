@@ -7,7 +7,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# General Environments
+# EDITOR
 
 export VISUAL=vim
 export EDITOR=$VISUAL
@@ -18,8 +18,3 @@ export PATH=$HOME/.asdf/shims:$PATH
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
-
-# GOLANG
-
-export GOPATH=$HOME/go
-export PATH=$PATH:$(go env GOPATH)/bin
