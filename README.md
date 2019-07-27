@@ -3,10 +3,11 @@ My Dotfiles
 
 These are my few dotfiles.
 
-## Prerequisites
+## Requirements
 
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [vim](https://github.com/vim/vim)
+* [vim-plug](https://github.com/junegunn/vim-plug)
 
 ## Contributing
 
@@ -18,4 +19,4 @@ These are my few dotfiles.
 
 ## Maintainers
 
-* [sergioaugrod](https://github.com/sergioaugrod/)
+* [sergioaugrod](https://github.com/sergioaugrod)

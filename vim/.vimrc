@@ -6,36 +6,32 @@ set nocompatible
 
 filetype off
 
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-
-" Keep plugin commands between vundle#begin/end.
-call vundle#begin()
+" https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
 
 " Must have
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'rking/ag.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'flazz/vim-colorschemes'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-surround'
+Plug 'flazz/vim-colorschemes'
 
 " TMUX
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Languages
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'dsawardekar/ember.vim'
-Plugin 'joukevandermaas/vim-ember-hbs'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'elixir-lang/vim-elixir'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'dsawardekar/ember.vim'
+Plug 'joukevandermaas/vim-ember-hbs'
 
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 syntax enable
