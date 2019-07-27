@@ -122,19 +122,8 @@ let g:multi_cursor_quit_key='<Esc>'
 " Airline
 let g:airline_powerline_fonts = 1
 
-" Remove Bars
-set guioptions-=T
-set guioptions-=t
-set guioptions-=L
-set guioptions-=l
-set guioptions-=m
-set guioptions-=r
-
 " Remove all trailing whitespaces at save
 autocmd BufWritePre * :%s/\s\+$//e
-
-" Correct vim colors in tmux
-set term=screen-256color
 
 " Ignore some directories
 set wildignore+=**/node_modules,**/bower_components,**/tmp,**/vendor,**/git
