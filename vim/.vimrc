@@ -9,7 +9,6 @@ filetype off
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
-" Must have
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'kien/ctrlp.vim'
@@ -18,18 +17,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-surround'
 Plug 'flazz/vim-colorschemes'
-
-" TMUX
 Plug 'christoomey/vim-tmux-navigator'
-
-" Languages
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'elixir-lang/vim-elixir'
-Plug 'othree/html5.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'dsawardekar/ember.vim'
-Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
