@@ -9,7 +9,6 @@ filetype off
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
@@ -95,6 +94,14 @@ set hidden
 " Increase history
 set history=1000
 
+" Netrw Tweaks
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_preview = 1
+let g:netrw_winsize = 25
+let g:netrw_altv = 1
+
 " Space as leader
 map <space> <leader>
 
@@ -124,5 +131,4 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Ignore some directories
 set wildignore+=**/node_modules,**/bower_components,**/tmp,**/vendor,**/git
-let NERDTreeIgnore=['node_modules', 'bower_components', 'tmp', 'vendor', 'tags']
 let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|tmp\|vendor\|DS_Store\|git|tags'
