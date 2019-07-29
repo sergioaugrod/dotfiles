@@ -10,10 +10,10 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'rking/ag.vim'
 Plug 'tpope/vim-surround'
 Plug 'flazz/vim-colorschemes'
 Plug 'christoomey/vim-tmux-navigator'
@@ -97,25 +97,9 @@ set history=1000
 " Netrw Tweaks
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_preview = 1
-let g:netrw_winsize = 25
 let g:netrw_altv = 1
-
-" Space as leader
-map <space> <leader>
-
-" Window buffer navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-" Ctrl C + Ctrl V
-vmap <C-c> "+yi
-vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
-imap <C-v> <C-r><C-o>+
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " Multi cursors mapping
 let g:multi_cursor_next_key='<C-n>'
@@ -129,6 +113,21 @@ let g:airline_powerline_fonts = 1
 " Remove all trailing whitespaces at save
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Ignore some directories
-set wildignore+=**/node_modules,**/bower_components,**/tmp,**/vendor,**/git
-let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|tmp\|vendor\|DS_Store\|git|tags'
+" Space as leader
+map <space> <leader>
+
+" fzf.vim shortcuts
+nnoremap <C-g> :Rg<Cr>
+nnoremap <C-p> :GFiles<Cr>
+
+" Window buffer navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Ctrl C + Ctrl V
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
