@@ -53,9 +53,6 @@ set numberwidth=4
 " To display the status line always
 set laststatus=2
 
-" Dont unload buffers
-set hidden
-
 " New window is put below the current one
 set splitbelow
 " New window is put right of the current one
