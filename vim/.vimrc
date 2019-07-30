@@ -4,20 +4,18 @@ set encoding=utf-8
 " To work cool, disable compatibility with Vi
 set nocompatible
 
-filetype off
-
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'flazz/vim-colorschemes'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-surround'
-Plug 'flazz/vim-colorschemes'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'sheerun/vim-polyglot'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -94,18 +92,24 @@ set hidden
 " Increase history
 set history=1000
 
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
 " Netrw Tweaks
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
 let g:netrw_altv = 1
+let g:netrw_banner = 0
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+let g:netrw_liststyle = 3
 
 " Multi cursors mapping
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
+let g:multi_cursor_skip_key='<C-x>'
 
 " Airline
 let g:airline_powerline_fonts = 1
