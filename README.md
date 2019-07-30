@@ -5,9 +5,20 @@ These are my few dotfiles.
 
 ## Requirements
 
-* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* [vim](https://github.com/vim/vim)
+### TMUX
+
+* [tpm](https://github.com/tmux-plugins/tpm)
+
+### VIM
+
 * [vim-plug](https://github.com/junegunn/vim-plug)
+* [fzf](https://github.com/junegunn/fzf)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [asdf](https://github.com/asdf-vm/asdf)
+
+### ZSH
+
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ## Contributing
 
