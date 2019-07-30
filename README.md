@@ -5,18 +5,18 @@ These are my few dotfiles.
 
 ## Requirements
 
-### TMUX
+### tmux
 
 * [tpm](https://github.com/tmux-plugins/tpm)
 
-### VIM
+### vim (with +clipboard)
 
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * [fzf](https://github.com/junegunn/fzf)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [asdf](https://github.com/asdf-vm/asdf)
 
-### ZSH
+### zsh
 
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
