@@ -11,6 +11,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'flazz/vim-colorschemes'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
@@ -99,13 +100,6 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
-" Netrw Tweaks
-let g:netrw_altv = 1
-let g:netrw_banner = 0
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-let g:netrw_liststyle = 3
 
 " Multi cursors mapping
 let g:multi_cursor_next_key='<C-n>'
