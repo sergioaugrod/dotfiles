@@ -126,7 +126,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Ctrl C + Ctrl V
+" ctrl c + ctrl v
 vmap <C-c> "+yi
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
+
+" Open NERDTree with ctrl + n
+map <C-n> :NERDTreeToggle<CR>
