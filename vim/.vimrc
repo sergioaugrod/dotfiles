@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'flazz/vim-colorschemes'
+Plug 'janko/vim-test'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
@@ -33,9 +34,6 @@ set incsearch
 
 " Search highlight
 set hlsearch
-
-" Search ignore case
-set ignorecase
 
 " Search do not wrap around
 set nowrap
@@ -116,10 +114,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Space as leader
 map <space> <leader>
 
-" fzf.vim shortcuts
-nnoremap <C-g> :Rg<Cr>
-nnoremap <C-p> :GFiles<Cr>
-
 " Window buffer navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -131,5 +125,14 @@ vmap <C-c> "+yi
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
 
-" Open NERDTree with ctrl + n
-map <C-n> :NERDTreeToggle<CR>
+" fzf.vim mappings
+nnoremap <C-g> :Rg<Cr>
+nnoremap <C-p> :GFiles<Cr>
+
+" NerdTree mappings
+map <leader>t :NERDTreeToggle<CR>
+
+" vim-test mappings
+nmap <silent> <leader>tn :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ta :TestSuite<CR>
