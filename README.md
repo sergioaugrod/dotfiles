@@ -7,7 +7,7 @@ These are my few dotfiles.
 
 ### tmux
 
-* [tpm](https://github.com/tmux-plugins/tpm)
+* [.tmux](https://github.com/gpakosz/.tmux)
 
 ### vim (with +clipboard)
 
