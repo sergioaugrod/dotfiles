@@ -8,7 +8,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'flazz/vim-colorschemes'
+Plug 'liuchengxu/space-vim-dark'
 Plug 'janko/vim-test'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -18,6 +18,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'mhinz/vim-mix-format', { 'for': ['elixir'] }
 " Elixir
 Plug 'slashmili/alchemist.vim'
 
@@ -26,8 +27,7 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
-set background=dark
-colorscheme hybrid
+color space-vim-dark
 
 " Move the cursor to the matched string
 set incsearch
@@ -121,13 +121,12 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " ctrl c + ctrl v
-vmap <C-c> "+yi
-vmap <C-v> c<ESC>"+p
-imap <C-v> <C-r><C-o>+
+vmap <C-c> "+y
+vmap <C-v> c<ESC>"+gP
 
 " fzf.vim mappings
-nnoremap <C-g> :Rg<Cr>
-nnoremap <C-p> :GFiles<Cr>
+nnoremap <C-g> :Rg<CR>
+nnoremap <C-p> :GFiles<CR>
 
 " NerdTree mappings
 map <leader>t :NERDTreeToggle<CR>
@@ -136,3 +135,7 @@ map <leader>t :NERDTreeToggle<CR>
 nmap <silent> <leader>tn :TestNearest<CR>
 nmap <silent> <leader>tf :TestFile<CR>
 nmap <silent> <leader>ta :TestSuite<CR>
+
+" vim-mix-format
+let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1
