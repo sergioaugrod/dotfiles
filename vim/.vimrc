@@ -33,6 +33,9 @@ syntax enable
 color space-vim-dark
 hi LineNr ctermbg=NONE guibg=NONE
 
+" disable gui cursor styling
+set guicursor=
+
 " Move the cursor to the matched string
 set incsearch
 
