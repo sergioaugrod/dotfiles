@@ -9,25 +9,13 @@ These are my few dotfiles.
 
 * [.tmux](https://github.com/gpakosz/.tmux)
 
-### vim (with +clipboard)
+### neovim
 
-* [vim-plug](https://github.com/junegunn/vim-plug)
-* [fzf](https://github.com/junegunn/fzf)
+* [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+* [packer](https://github.com/wbthomason/packer.nvim)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ### zsh
 
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [asdf](https://github.com/asdf-vm/asdf)
-
-## Contributing
-
-1. Clone it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-
-## Maintainers
-
-* [sergioaugrod](https://github.com/sergioaugrod)
