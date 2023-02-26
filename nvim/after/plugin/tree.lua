@@ -8,3 +8,10 @@ require('nvim-tree').setup({
     dotfiles = true,
   },
 })
+
+local function open_nvim_tree()
+  require('nvim-tree.api').tree.open()
+end
+
+-- always open the tree on startup
+vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
