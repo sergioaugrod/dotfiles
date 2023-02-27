@@ -34,8 +34,11 @@ return require('packer').startup(function(use)
   -- Theme
   use { 'catppuccin/nvim', as = 'catppuccin' }
 
-  -- Statusline
-  use 'nvim-lualine/lualine.nvim';
+  -- Git
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  use { 'lewis6991/gitsigns.nvim' }
 
   use 'mg979/vim-visual-multi';
+  use 'nvim-lualine/lualine.nvim';
+  use 'github/copilot.vim';
 end)

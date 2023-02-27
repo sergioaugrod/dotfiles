@@ -14,3 +14,6 @@ vim.keymap.set('n', '<leader>r', ':so %<CR>')
 
 -- Copy to clipboard
 vim.keymap.set('v', '<C-c>', '"+y')
+
+-- Toggle Tree
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>')
