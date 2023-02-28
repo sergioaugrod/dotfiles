@@ -23,9 +23,7 @@ lsp.ensure_installed({
   'lua_ls',
 })
 
-lsp.configure('gopls', {
-  on_attach = on_attach
-})
+lsp.configure('gopls', { on_attach = on_attach })
 
 lsp.configure('lua_ls', {
   on_attach = on_attach,
@@ -39,8 +37,12 @@ lsp.configure('lua_ls', {
   },
 })
 
+-- To avoid issues with Copilot auto complete
+local cmp_mappings = lsp.defaults.cmp_mappings()
+cmp_mappings['<Tab>'] = nil
+cmp_mappings['<S-Tab>'] = nil
+lsp.setup_nvim_cmp({ mapping = cmp_mappings })
+
 lsp.setup()
 
-vim.diagnostic.config({
-  virtual_text = true,
-})
+vim.diagnostic.config({ virtual_text = true })
