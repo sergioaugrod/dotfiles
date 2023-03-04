@@ -26,3 +26,6 @@ end
 
 -- always open the tree on startup
 vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
+
+-- Toggle Tree
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>')
