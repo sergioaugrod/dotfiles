@@ -2,15 +2,20 @@ local lsp = require('lsp-zero')
 local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
 local on_attach = function(client, bufnr)
-  -- Format on save
   if client.supports_method('textDocument/formatting') then
     vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+    -- Format on save
     vim.api.nvim_create_autocmd('BufWritePre', {
       group = augroup,
       buffer = bufnr,
       callback = function()
-        vim.lsp.buf.format({ bufnr = bufnr, timeout_ms = 5000 })
+        vim.lsp.buf.format({ bufnr = bufnr, async = true })
       end,
+    })
+    -- Remove trailing whitespace on save
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      pattern = { '*' },
+      command = [[%s/\s\+$//e]],
     })
   end
 end
@@ -21,9 +26,11 @@ lsp.ensure_installed({
   'golangci_lint_ls',
   'gopls',
   'lua_ls',
+  'terraformls',
 })
 
 lsp.configure('gopls', { on_attach = on_attach })
+lsp.configure('terraformls', { on_attach = on_attach })
 
 lsp.configure('lua_ls', {
   on_attach = on_attach,

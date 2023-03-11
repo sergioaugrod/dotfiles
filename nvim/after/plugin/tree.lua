@@ -2,11 +2,19 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- empty setup using defaults
 require('nvim-tree').setup({
   filters = {
     dotfiles = true,
   },
+  actions = {
+    open_file = {
+      quit_on_open = false,
+      resize_window = true,
+      window_picker = {
+        enable = false,
+      },
+    },
+  }
 })
 
 local function open_nvim_tree(data)
