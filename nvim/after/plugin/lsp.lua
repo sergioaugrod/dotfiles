@@ -12,18 +12,12 @@ local on_attach = function(client, bufnr)
         vim.lsp.buf.format({ bufnr = bufnr, async = true })
       end,
     })
-    -- Remove trailing whitespace on save
-    vim.api.nvim_create_autocmd('BufWritePre', {
-      pattern = { '*' },
-      command = [[%s/\s\+$//e]],
-    })
   end
 end
 
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-  'golangci_lint_ls',
   'gopls',
   'lua_ls',
   'terraformls',
