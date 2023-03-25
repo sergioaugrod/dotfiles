@@ -9,7 +9,7 @@ local on_attach = function(client, bufnr)
       group = augroup,
       buffer = bufnr,
       callback = function()
-        vim.lsp.buf.format({ bufnr = bufnr, async = true })
+        vim.lsp.buf.format({ bufnr = bufnr, timeout_ms = 5000 })
       end,
     })
   end
@@ -45,5 +45,18 @@ cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({ mapping = cmp_mappings })
 lsp.setup()
+
+local null_ls = require('null-ls')
+local null_opts = lsp.build_options('null-ls', {})
+
+null_ls.setup({
+  on_attach = function(client, bufnr)
+    null_opts.on_attach(client, bufnr)
+  end,
+  sources = {
+    null_ls.builtins.diagnostics.golangci_lint,
+    null_ls.builtins.formatting.goimports
+  }
+})
 
 vim.diagnostic.config({ virtual_text = true })
