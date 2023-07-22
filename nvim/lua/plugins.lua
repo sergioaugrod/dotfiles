@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- Theme
-  use 'Mofiqul/vscode.nvim';
+  use 'Mofiqul/vscode.nvim'
 
   -- Git
   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
