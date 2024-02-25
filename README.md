@@ -8,14 +8,14 @@ These are my few dotfiles.
 ### tmux
 
 * [tmux](https://github.com/tmux/tmux/wiki/Installing)
-* [.tmux](https://github.com/gpakosz/.tmux)
 
 ### neovim
 
 * [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-* [packer](https://github.com/wbthomason/packer.nvim)
+* [lazy.nvim](https://github.com/folke/lazy.nvim)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [fzf](https://github.com/junegunn/fzf)
+* [Copilot Chat Prerequisites](https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#installation)
 
 ### zsh
 
