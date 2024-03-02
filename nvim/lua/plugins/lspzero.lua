@@ -22,6 +22,8 @@ return {
     event = 'InsertEnter',
     dependencies = {
       { 'L3MON4D3/LuaSnip' },
+      { 'hrsh7th/cmp-path' },
+      { 'hrsh7th/cmp-buffer' },
     },
     config = function()
       local lsp_zero = require('lsp-zero')
@@ -37,12 +39,11 @@ return {
           ['<C-s>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
         }),
-        sources = {
-          { name = 'copilot' },
+        sources = cmp.config.sources({
           { name = 'nvim_lsp' },
-          { name = 'buffer' },
           { name = 'path' },
-        },
+          { name = 'buffer' },
+        })
       })
     end
   },

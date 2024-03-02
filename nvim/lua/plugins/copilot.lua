@@ -11,15 +11,13 @@ return {
           terraform = true,
           ['*'] = false, -- disable for all other filetypes and ignore default `filetypes`
         },
-        suggestion = { enabled = false },
-        panel = { enabled = false },
+        suggestion = {
+          auto_trigger = true,
+          keymap = {
+            accept = '<TAB>',
+          },
+        },
       })
-    end
-  },
-  {
-    'zbirenbaum/copilot-cmp',
-    config = function()
-      require('copilot_cmp').setup()
     end
   },
   {
