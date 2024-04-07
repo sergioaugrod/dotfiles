@@ -62,10 +62,15 @@ return {
       lsp_zero.extend_lspconfig()
 
       lsp_zero.on_attach(function(_, bufnr)
+        local opts = { buffer = bufnr }
         -- see :help lsp-zero-keybindings
         -- to learn the available actions
-        lsp_zero.default_keymaps({ buffer = bufnr })
+        lsp_zero.default_keymaps(opts)
         lsp_zero.buffer_autoformat()
+
+        -- use telescope for some LSP keymaps
+        vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', opts)
+        vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', opts)
       end)
 
       local lspconfig = require('lspconfig')

@@ -8,7 +8,6 @@ return {
         filetypes = {
           lua = true,
           go = true,
-          terraform = true,
           ['*'] = false, -- disable for all other filetypes and ignore default `filetypes`
         },
         suggestion = {
