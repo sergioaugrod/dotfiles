@@ -2,22 +2,20 @@ export ZSH=$HOME/.oh-my-zsh
 
 # https://github.com/halfo/lambda-mod-zsh-theme
 ZSH_THEME="lambda-mod"
-plugins=(git)
+
+plugins=(asdf git)
+
+zstyle ':omz:alpha:lib:git' async-prompt no
 
 source $ZSH/oh-my-zsh.sh
 
 # EDITOR
 
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR=$VISUAL
 
-# ASDF
+alias vim=nvim
 
-export PATH=$HOME/.asdf/shims:$PATH
+# GO PATH
 
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
-# Erlang/Elixir IEx history
-
-export ERL_AFLAGS="-kernel shell_history enabled"
+export PATH="$PATH:$(go env GOPATH)/bin"
