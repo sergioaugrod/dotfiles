@@ -20,22 +20,23 @@ return {
     end
   },
   {
-    {
-      'CopilotC-Nvim/CopilotChat.nvim',
-      branch = 'canary',
-      event = 'VeryLazy',
-      dependencies = {
-        { 'zbirenbaum/copilot.lua' },
-        { 'nvim-lua/plenary.nvim' },
-      },
-      build = 'make tiktoken',
-      keys = {
-        { '<leader>ccc', ':CopilotChat ',               desc = 'CopilotChat - Prompt' },
-        { '<leader>ccr', '<cmd>CopilotChatReview<cr>',  desc = 'CopilotChat - Review code' },
-        { '<leader>cce', '<cmd>CopilotChatExplain<cr>', desc = 'CopilotChat - Explain code' },
-        { '<leader>ccd', '<cmd>CopilotChatDocs<cr>',    desc = 'CopilotChat - Add docs' },
-        { '<leader>cct', '<cmd>CopilotChatTests<cr>',   desc = 'CopilotChat - Generate tests' },
-      },
+    'CopilotC-Nvim/CopilotChat.nvim',
+    event = 'VeryLazy',
+    branch = 'canary',
+    dependencies = {
+      { 'zbirenbaum/copilot.lua' },
+      { 'nvim-lua/plenary.nvim' },
     },
-  }
+    build = 'make tiktoken',
+    opts = {
+      debug = false,
+    },
+    keys = {
+      { '<leader>ccc', ':CopilotChat ',               desc = 'CopilotChat - Prompt' },
+      { '<leader>ccr', '<cmd>CopilotChatReview<cr>',  desc = 'CopilotChat - Review code' },
+      { '<leader>cce', '<cmd>CopilotChatExplain<cr>', desc = 'CopilotChat - Explain code' },
+      { '<leader>ccd', '<cmd>CopilotChatDocs<cr>',    desc = 'CopilotChat - Add docs' },
+      { '<leader>cct', '<cmd>CopilotChatTests<cr>',   desc = 'CopilotChat - Generate tests' },
+    },
+  },
 }
