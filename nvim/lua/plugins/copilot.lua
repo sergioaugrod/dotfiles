@@ -22,13 +22,13 @@ return {
   {
     'CopilotC-Nvim/CopilotChat.nvim',
     event = 'VeryLazy',
-    branch = 'canary',
     dependencies = {
       { 'zbirenbaum/copilot.lua' },
       { 'nvim-lua/plenary.nvim' },
     },
     build = 'make tiktoken',
     opts = {
+      model = 'claude-3.5-sonnet',
       debug = false,
     },
     keys = {
