@@ -18,25 +18,5 @@ return {
         },
       })
     end
-  },
-  {
-    'CopilotC-Nvim/CopilotChat.nvim',
-    event = 'VeryLazy',
-    dependencies = {
-      { 'zbirenbaum/copilot.lua' },
-      { 'nvim-lua/plenary.nvim' },
-    },
-    build = 'make tiktoken',
-    opts = {
-      model = 'claude-3.5-sonnet',
-      debug = false,
-    },
-    keys = {
-      { '<leader>ccc', ':CopilotChat ',               desc = 'CopilotChat - Prompt' },
-      { '<leader>ccr', '<cmd>CopilotChatReview<cr>',  desc = 'CopilotChat - Review code' },
-      { '<leader>cce', '<cmd>CopilotChatExplain<cr>', desc = 'CopilotChat - Explain code' },
-      { '<leader>ccd', '<cmd>CopilotChatDocs<cr>',    desc = 'CopilotChat - Add docs' },
-      { '<leader>cct', '<cmd>CopilotChatTests<cr>',   desc = 'CopilotChat - Generate tests' },
-    },
-  },
+  }
 }
