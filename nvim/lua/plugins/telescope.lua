@@ -5,7 +5,7 @@ return {
   },
   {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.5',
+    tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' },
     keys = {
       { '<C-p>',      '<cmd>Telescope find_files<CR>',           desc = 'telescope: find_files' },

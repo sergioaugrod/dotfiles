@@ -15,7 +15,6 @@ These are my few dotfiles.
 * [lazy.nvim](https://github.com/folke/lazy.nvim)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [fzf](https://github.com/junegunn/fzf)
-* [Copilot Chat Prerequisites](https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#installation)
 
 ### zsh
 
