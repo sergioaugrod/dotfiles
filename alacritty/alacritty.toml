@@ -1,10 +1,18 @@
-general.import = [
-  "~/.config/alacritty/themes/themes/tomorrow_night.toml"
-]
+general.import = ["~/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-normal.family = "Fira Code Nerd Font"
-size = 11.0
+size = 14.0
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[window.padding]
+x = 5
